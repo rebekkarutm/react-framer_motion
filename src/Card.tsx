@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
-import { cardStyle, divStyle, optionStyle, containerStyle } from './Styles';
+import { cardStyle, divStyle, btnStyle, containerStyle } from './Styles';
 
+//making props so I can have the heading, paragraph, and button say different things (declared in app.tsx)
 type Props = {
     heading:string,
     paragraph:string,
     button:string
 }
 
+//making a container to stagger the movement of the cards
 const container = {
     hidden: {opacity: 1, scale: 0},
     visible: {
@@ -19,6 +21,7 @@ const container = {
     }
 }
 
+//the cards being hidden until they've moved into place
 const item = {
     hidden: {y: 200, opacity: 0},
     visible: {
@@ -27,6 +30,7 @@ const item = {
     },
 }
 
+//creating the cards wrapped in motion divs, styling and mapping through them (to make the animation staggered)
 const Card = ({heading, paragraph, button}:Props) => {
     return (
         <motion.div
@@ -46,7 +50,7 @@ const Card = ({heading, paragraph, button}:Props) => {
                 <p>{paragraph}</p>
                 <div style= {divStyle}>
                     <motion.div
-                        style={optionStyle}
+                        style={btnStyle}
                         whileHover={{
                             scale: 1.1,
                             transition: {

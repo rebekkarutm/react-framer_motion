@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
 
+//styling for the cards themselves
 const cardStyle:CSSProperties = {
     width: '280px',
     height: 'auto',
@@ -12,7 +13,8 @@ const cardStyle:CSSProperties = {
 
 export {cardStyle}
 
-const optionStyle:CSSProperties = {
+//styling for buttons
+const btnStyle:CSSProperties = {
     backgroundColor: 'lightgrey',
     margin: '10px',
     borderRadius: '10px',
@@ -21,8 +23,9 @@ const optionStyle:CSSProperties = {
     padding: '12px',
     cursor: 'pointer',
 }
-export {optionStyle}
+export {btnStyle}
 
+//styling for the stuff that's on the cards
 const divStyle:CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
@@ -30,6 +33,7 @@ const divStyle:CSSProperties = {
 }
 export {divStyle}
 
+//styling for the container of cards to position them
 const containerStyle:CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
